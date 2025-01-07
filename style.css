@@ -146,7 +146,8 @@ button:disabled {
 
 @media screen and (max-width: 1250px), screen and (max-width: 768px), screen and (max-width: 425px) {
     .container__imagem-pessoa {
-        display: none;
+        display: flex;
+        flex-wrap: wrap;
     }
 
     h1 {
