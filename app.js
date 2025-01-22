@@ -2,7 +2,14 @@ function sortear(){
     let quantidade = parseInt(document.getElementById('quantidade').value);
     let de = parseInt(document.getElementById('de').value);
     let ate = parseInt(document.getElementById('ate').value);
-    
+    let regex = /^[0-9]+$/; 
+
+
+    if (!regex.test(quantidade) || !regex.test(de) || !regex.test(ate)) {
+        alert("Por favor, insira um nome válido (sem caracteres especiais).");
+        amigo.focus();
+        return;
+    }   
     if (de >= ate) {
         alert('Campo "Do número" deve ser inferior ao campo "Até o número". Verifique!');
         return;
